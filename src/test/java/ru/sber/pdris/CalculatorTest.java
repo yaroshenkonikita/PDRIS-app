@@ -6,12 +6,15 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.junit5.AllureJunit5;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Epic("PDRIS")
 @Feature("Calculator")
+@ExtendWith(AllureJunit5.class)
 final class CalculatorTest {
 
     @Test
@@ -23,4 +26,3 @@ final class CalculatorTest {
         assertEquals(5, calculator.add(2, 3));
     }
 }
-
